@@ -1,0 +1,1 @@
+[32mINFO    [0m root:jira_user_api.py:23 Fetched users: 400 - {"errorMessages":["The username or property query parameter must be provided"],"errors":{}}
