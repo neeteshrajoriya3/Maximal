@@ -1,5 +1,4 @@
 from urllib.parse import quote
-
 import requests
 import yaml
 import logging
@@ -16,7 +15,8 @@ GET_ALL_USER=config["jira"]["user_api"]["GET_Get_all_users"]
 ##This will put all the log info in test_log.log
 logging.basicConfig(filename="logs/test_log.log",level=logging.INFO)
 
-def get_all_users(query="a"):  # ✅ Default query parameter
+
+def get_all_users():  # ✅ Default query parameter
     """Fetches a list of all users in Jira with a default query."""
     """url1 = f"{JIRA_URL}/rest/api/3/user/search?query={query}"  # ✅ Pass query param"""
     url = f"{JIRA_URL}{GET_ALL_USER}"  # ✅ Pass query param

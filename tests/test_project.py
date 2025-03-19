@@ -1,23 +1,17 @@
-"""from pytest_bdd import scenario, given, when, then
-from steps.project_steps import print_hello
 import pytest
+import yaml
+from utils.jira_project_api import get_all_projects
 
-# Link the test function to the feature file scenario
-@scenario("../features/project.feature", "Print message")
-def test_hello():
-    pass
+# ✅ Load configuration from config.yaml
+with open("config.yaml", "r") as file:
+    config = yaml.safe_load(file)
 
-@pytest.fixture
-@given('I have a function that prints "Hello, World!"')
-def hello_function():
-    return print_hello  # Return the function itself
 
-@pytest.fixture
-@when("I execute the function")
-def when_execute(hello_function):
-    return hello_function()  # Call the function and return its result
+@pytest.mark.api  # ✅ API-related test
+@pytest.mark.user  # ✅ User-related test
+def test_get_all_projects():
+    """Test to fetch all users from Jira."""
+    projects = get_all_projects()
 
-@then('it should print "Hello, World!"')
-def then_validate_output(when_execute):
-    assert when_execute == "Hello, World!"  # Validate the function output
-"""
+    assert isinstance(projects, list)  # ✅ Ensure the result is a list
+    assert len(projects) > 0  # ✅ Ensure there is at least one user

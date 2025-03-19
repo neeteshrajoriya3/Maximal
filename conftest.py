@@ -39,3 +39,4 @@ def fetch_latest_issues():
     """Fixture to get the latest Jira issues using JQL from config.yaml."""
     jql_query=config["jira"]["search_jql"]
     return search_user(jql_query)
+
