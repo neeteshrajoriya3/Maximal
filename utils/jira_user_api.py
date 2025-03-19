@@ -13,6 +13,7 @@ AUTH=HTTPBasicAuth(config["jira"]["email"],config["jira"]["api_token"])
 GET_ALL_USER=config["jira"]["user_api"]["GET_Get_all_users"]
 
 #Configure Logging
+##This will put all the log info in test_log.log
 logging.basicConfig(filename="logs/test_log.log",level=logging.INFO)
 
 def get_all_users(query="a"):  # ✅ Default query parameter
