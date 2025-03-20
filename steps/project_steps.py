@@ -39,3 +39,16 @@ def delete_project(project_key):
 @then("The Project should get deleted")
 def verify_project_deleted(project_key):
     logging.info(f"Project deleted: {project_key}")
+
+@scenario("../features/projeect.feature", "Restore deleted or archived project")
+@given("I have Project key")
+def search_project(project_key):
+    logging.info(f"Searching Project: {project_key}")
+
+@when("I restore the Project")
+def restore_project(project_key):
+    logging.info(f"Restoring Project: {project_key}")
+
+@then("The Project should be visible in the list")
+def verify_project_in_list(project_key):
+    logging.info(f"Project Restored: {project_key}")

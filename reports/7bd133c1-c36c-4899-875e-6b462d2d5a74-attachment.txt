@@ -1,0 +1,1 @@
+[32mINFO    [0m root:test_project.py:25 Project Key Not Found: AUTO

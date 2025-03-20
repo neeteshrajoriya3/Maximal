@@ -1,0 +1,8 @@
+[32mINFO    [0m root:jira_project_api.py:29 Initiating get_project
+[32mINFO    [0m root:jira_project_api.py:35 Ended execution of get_project. Returning response.status_code
+[32mINFO    [0m root:test_project.py:38 Project Key Found: XML
+[32mINFO    [0m root:jira_project_api.py:48 Initiating restore_project
+[32mINFO    [0m root:jira_project_api.py:53 Ended execution of restore_project. Project Restored: XML
+[32mINFO    [0m root:jira_project_api.py:29 Initiating get_project
+[32mINFO    [0m root:jira_project_api.py:35 Ended execution of get_project. Returning response.status_code
+[32mINFO    [0m root:test_project.py:44 Project Key 'XML' is not present in Delete/Archive sections. Please check 'Key' again

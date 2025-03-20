@@ -1,0 +1,3 @@
+[32mINFO    [0m root:jira_project_api.py:29 Initiating get_project
+[32mINFO    [0m root:jira_project_api.py:35 Ended execution of get_project. Returning response.status_code
+[32mINFO    [0m root:test_project.py:36 Project already present: XML. Stopping execution

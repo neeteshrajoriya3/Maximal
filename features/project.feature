@@ -15,7 +15,7 @@ Feature: Jira Project Management
     When I delete the Project
     Then The Project should get deleted
 
-  Scenario: Delete project with ProjectID
-    Given I have ProjectID
-    When I delete the Project
-    Then The Project should get deleted
+  Scenario: Restore deleted or archived project
+    Given I have Project key
+    When I restore the Project
+    Then The Project should be visible in the list

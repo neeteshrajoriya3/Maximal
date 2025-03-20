@@ -27,3 +27,7 @@ def test_search_user():
     assert isinstance(user_results, list)  # ✅ Ensure the response is a list
     assert len(user_results) > 0  # ✅ Ensure at least one result is found
     assert user_results[0]["emailAddress"] == user_email  # ✅ Verify correct user
+
+def delete_project():
+    #delete a project by key if it is present
+

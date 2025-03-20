@@ -7,7 +7,7 @@ jira:
   test_user_email: "neetesh.rajoriya3@gmail.com"
   project:
     name: "AutomatedProject"
-    key: "AUTO"
+    key: "XML"
     lead_email: "neetesh.rajoriya3@gmail.com"
     issue:
       summary: "Sample Issue"
@@ -17,9 +17,9 @@ jira:
     POST_Create_project: "/rest/api/3/project"
     GET_Get_recent_projects: "/rest/api/3/project/recent"
     GET_Get_projects_paginated: "/rest/api/3/project/search"
-    GET_Get_project: "/rest/api/3/project/{projectIdOrKey}"
+    GET_Get_project: "/rest/api/3/project/"
     PUT_Update_project: "/rest/api/3/project/{projectIdOrKey}"
-    DEL_Delete_project: "/rest/api/3/project/{projectIdOrKey}"
+    DEL_Delete_project: "/rest/api/3/project/"
     POST_Archive_project: "/rest/api/3/project/{projectIdOrKey}/archive"
     POST_Delete_project_asynchronously: "/rest/api/3/project/{projectIdOrKey}/delete"
     POST_Restore_deleted_or_archived_project: "/rest/api/3/project/{projectIdOrKey}/restore"
