@@ -15,3 +15,5 @@ def test_get_all_projects():
 
     assert isinstance(projects, list)  # ✅ Ensure the result is a list
     assert len(projects) > 0  # ✅ Ensure there is at least one user
+
+def delete_project_by_key(project_key)
