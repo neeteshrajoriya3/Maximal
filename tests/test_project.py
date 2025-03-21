@@ -1,20 +1,15 @@
 import logging
-
 import pytest
+from utils.jira_project_api import JiraProjectAPI
 import yaml
-from utils.jira_project_api import get_project, get_all_projects, delete_project, delete_project_by_key, restore_project
 
-# ✅ Load configuration from config.yaml
-with open("config.yaml", "r") as file:
-    config = yaml.safe_load(file)
+@pytest.fixture(scope="module")
+def jira_api():
+    return JiraProjectAPI()
 
-
-@pytest.mark.api  # ✅ API-related test
-@pytest.mark.project  # ✅ User-related test
-def test_get_all_projects():
+def test_get_all_projects(jira_api):
     """Test to fetch all users from Jira."""
-    projects = get_all_projects()
-
+    projects = jira_api.get_all_projects()
     assert isinstance(projects, list)  # ✅ Ensure the result is a list
     assert len(projects) > 0  # ✅ Ensure there is at least one user
 

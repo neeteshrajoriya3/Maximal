@@ -19,7 +19,7 @@ jira:
     GET_Get_projects_paginated: "/rest/api/3/project/search"
     GET_Get_project: "/rest/api/3/project/"
     PUT_Update_project: "/rest/api/3/project/{projectIdOrKey}"
-    DEL_Delete_project: "/rest/api/3/project/"
+    DEL_Delete_project: "/rest/api/3/project/{projectIdOrKey}"
     POST_Archive_project: "/rest/api/3/project/{projectIdOrKey}/archive"
     POST_Delete_project_asynchronously: "/rest/api/3/project/{projectIdOrKey}/delete"
     POST_Restore_deleted_or_archived_project: "/rest/api/3/project/{projectIdOrKey}/restore"
