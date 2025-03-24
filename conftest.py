@@ -1,9 +1,9 @@
 import pytest
 import yaml
 
-from utils.jira_project_api import create_project
-from utils.jira_user_api import get_all_users, get_lead_account_id, search_user
-from utils.jira_issue_api import search_issue,create_issue
+# from utils.jira_project_api import create_project
+# from utils.jira_user_api import get_all_users, get_lead_account_id, search_user
+# from utils.jira_issue_api import search_issue,create_issue
 
 with open("config.yaml","r") as file:
     config=yaml.safe_load(file)

@@ -1,0 +1,6 @@
+[32mINFO    [0m root:jira_project_api.py:40 Initiating get_project
+[32mINFO    [0m root:jira_project_api.py:43 Ended execution of get_project. Returning response.status_code
+[32mINFO    [0m root:test_project.py:25 Project key/ID is available for deletion: XMEL. Starting deletion of Project
+[32mINFO    [0m root:jira_project_api.py:48 Initiating delete_project
+[32mINFO    [0m root:jira_project_api.py:52 Ended execution of delete_project. Project deleted: XMEL
+[32mINFO    [0m root:test_project.py:32 Error occured while deleting the project.

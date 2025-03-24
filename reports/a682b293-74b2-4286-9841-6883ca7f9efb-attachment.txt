@@ -1,0 +1,1 @@
+[32mINFO    [0m root:jira_project_api.py:48 Initiating delete_project

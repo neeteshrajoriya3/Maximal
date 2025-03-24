@@ -3,6 +3,10 @@ import pytest
 from utils.jira_project_api import JiraProjectAPI
 import yaml
 
+# Loading configuration from config yaml
+with open("config.yaml", "r") as file:
+    config=yaml.safe_load(file)
+
 @pytest.fixture(scope="module")
 def jira_api():
     return JiraProjectAPI()
@@ -14,24 +18,26 @@ def test_get_all_projects(jira_api):
     assert len(projects) > 0  # ✅ Ensure there is at least one user
 
 
-def test_delete_project_by_key():
+def test_delete_project_by_key(jira_api):
     key = config["jira"]["project"]["key"]
-    project_status_code = get_project(key)
-    if project_status_code == 404:
-        logging.info(f"Project Key Not Found: {key}")
+    project_status_code = jira_api.get_project(key)
+    if project_status_code== 200:
+        logging.info(f"Project key/ID is available for deletion: {key}. Starting deletion of Project")
+        deletion_result=jira_api.delete_project(key)
     else:
-        logging.info(f"Project Key Found: {key}")
-        delete_project(key)
+        logging.info(f"Project is not found for deletion. Stopping execution for deletion")
+    if deletion_result in [200,201]:
+        logging.info(f"Project deleted successfully. Project key: {key}")
+    else:
+        logging.info(f"Error occured while deleting the project.")
 
-
-def test_restore_project():
+def test_restore_project(jira_api):
     key = config["jira"]["project"]["key"]
     project_status_code = get_project(key)
     if project_status_code == 200:
         logging.info(f"Project already present: {key}. Stopping execution")
     else:
         logging.info(f"Project Key Found: {key}")
-        response=restore_project(key)
-        #print(response)
-        assert response == 200
+        response=jira_api.restore_project(key)
 
+        assert response == 200
