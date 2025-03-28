@@ -52,3 +52,17 @@ def restore_project(project_key):
 @then("The Project should be visible in the list")
 def verify_project_in_list(project_key):
     logging.info(f"Project Restored: {project_key}")
+
+@scenario("../features/project.feature", "Create a project")
+
+@given("I have access to Jira project management")
+def jira_user_access():
+    logging.info("Accessing JIRA")
+
+@when("I create a project")
+def create_project():
+    logging.info("Creating a project")
+
+@then("The project should get created")
+def create_project():
+    logging.info("Project got created")

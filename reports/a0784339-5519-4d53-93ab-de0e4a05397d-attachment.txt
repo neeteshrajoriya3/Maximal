@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:44 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:101 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:113 Request sent
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:115 {"errorMessages":[],"errors":{"projectName":"A project with that name already exists."}}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:117 Project Key: None
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:118 Project created. Key: None

@@ -1,0 +1,2 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:44 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:101 Initiating project creation

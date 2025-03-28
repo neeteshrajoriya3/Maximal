@@ -1,0 +1,4 @@
+2025-03-28 16:09:27,372 - JiraProjectAPI - INFO - Starting project restore: XMLe
+2025-03-28 16:09:27,372 - JiraProjectAPI - INFO - Initiating restore_project: XMLe
+2025-03-28 16:09:27,752 - JiraProjectAPI - INFO - Project restored: XMLe, Status Code: 404
+2025-03-28 16:09:27,754 - JiraProjectAPI - INFO - Issue occurred in restoring project: XMLe

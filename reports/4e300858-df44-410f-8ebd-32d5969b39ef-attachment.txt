@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:43 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:test_project.py:44 Starting project restore: XMLe
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:93 Initiating restore_project: XMLe
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:96 Project restored: XMLe, Status Code: 404
+[32mINFO    [0m JiraProjectAPI:test_project.py:51 Issue occured in restoring project: XMLe

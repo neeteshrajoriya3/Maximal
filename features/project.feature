@@ -19,3 +19,8 @@ Feature: Jira Project Management
     Given I have Project key
     When I restore the Project
     Then The Project should be visible in the list
+
+  Scenario: Create a project
+    Given I have access to Jira project management
+    When I create a project
+    Then The project should get created

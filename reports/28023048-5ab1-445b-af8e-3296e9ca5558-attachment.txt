@@ -1,0 +1,5 @@
+2025-03-28 16:09:28,273 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 16:09:28,668 - JiraProjectAPI - INFO - Request sent: 400
+2025-03-28 16:09:28,668 - JiraProjectAPI - INFO - {"errorMessages":[],"errors":{"projectName":"A project with that name already exists."}}
+2025-03-28 16:09:28,668 - JiraProjectAPI - INFO - Project Key: None
+2025-03-28 16:09:28,668 - JiraProjectAPI - INFO - Project created. Key: None

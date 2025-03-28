@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:70 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:77 Project retrieved: {'errorMessages': ["No project could be found with key 'XMLe'."], 'errors': {}}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:78 status_code: 404
+[32mINFO    [0m JiraProjectAPI:test_project.py:25 Value of project_status_code: 404
+[32mINFO    [0m JiraProjectAPI:test_project.py:32 Project is not found for deletion. Stopping execution for deletion

@@ -1,0 +1,4 @@
+2025-03-28 16:09:27,768 - JiraProjectAPI - INFO - Executing get project
+2025-03-28 16:09:27,769 - JiraProjectAPI - INFO - Initiating get_project
+2025-03-28 16:09:28,263 - JiraProjectAPI - INFO - Project retrieved: {'errorMessages': ["No project could be found with key 'XMLe'."], 'errors': {}}
+2025-03-28 16:09:28,264 - JiraProjectAPI - INFO - status_code: 404

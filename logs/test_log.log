@@ -1,5 +1,31 @@
-2025-03-25 19:02:29,416 - DEBUG - This is a DEBUG message
-2025-03-25 19:02:29,417 - INFO - This is an INFO message
-2025-03-25 19:02:29,417 - WARNING - This is a WARNING message
-2025-03-25 19:02:29,417 - ERROR - This is an ERROR message
-2025-03-25 19:02:29,417 - CRITICAL - This is a CRITICAL message
+2025-03-28 17:15:41,347 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:19:18,736 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:19:18,738 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 17:19:25,734 - JiraProjectAPI - INFO - {"self":"https://neeteshrajoriya3.atlassian.net/rest/api/3/project/10035","id":10035,"key":"QRE"}
+2025-03-28 17:19:25,735 - JiraProjectAPI - INFO - Project Key: QRE
+2025-03-28 17:19:25,735 - JiraProjectAPI - INFO - Project created. Key: QRE
+2025-03-28 17:26:32,613 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:26:32,615 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 17:26:33,134 - JiraProjectAPI - INFO - {"errorMessages":[],"errors":{"projectName":"A project with that name already exists.","projectKey":"Project 'REMO' uses this project key."}}
+2025-03-28 17:26:33,135 - JiraProjectAPI - INFO - Project Key: None
+2025-03-28 17:26:33,143 - JiraProjectAPI - INFO - Project ID None saved in Config.yaml for further use
+2025-03-28 17:27:26,662 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:27:26,663 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 17:27:27,136 - JiraProjectAPI - INFO - {"errorMessages":[],"errors":{"projectName":"A project with that name already exists.","projectKey":"Project 'REMO' uses this project key."}}
+2025-03-28 17:27:27,137 - JiraProjectAPI - INFO - Project Key: None
+2025-03-28 17:27:27,149 - JiraProjectAPI - INFO - Project ID None saved in Config.yaml for further use
+2025-03-28 17:28:11,614 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:28:11,615 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 17:28:12,061 - JiraProjectAPI - INFO - {"errorMessages":[],"errors":{"projectName":"A project with that name already exists.","projectKey":"Project 'REMO' uses this project key."}}
+2025-03-28 17:28:12,063 - JiraProjectAPI - INFO - Project Key: None
+2025-03-28 17:28:12,071 - JiraProjectAPI - INFO - Project ID None saved in Config.yaml for further use
+2025-03-28 17:28:37,802 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:28:37,805 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 17:28:38,251 - JiraProjectAPI - INFO - {"errorMessages":[],"errors":{"projectName":"A project with that name already exists.","projectKey":"Project 'REMO' uses this project key."}}
+2025-03-28 17:28:38,252 - JiraProjectAPI - INFO - Project Key: None
+2025-03-28 17:28:38,260 - JiraProjectAPI - INFO - Project ID None saved in Config.yaml for further use
+2025-03-28 17:28:51,138 - JiraProjectAPI - INFO - JiraProjectAPI initialized successfully.
+2025-03-28 17:28:51,139 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-28 17:28:57,703 - JiraProjectAPI - INFO - {"self":"https://neeteshrajoriya3.atlassian.net/rest/api/3/project/10036","id":10036,"key":"QQQ"}
+2025-03-28 17:28:57,704 - JiraProjectAPI - INFO - Project Key: QQQ
+2025-03-28 17:28:57,713 - JiraProjectAPI - INFO - Project ID 10036 saved in Config.yaml for further use

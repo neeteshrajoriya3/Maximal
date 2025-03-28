@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:108 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:123 {"self":"https://neeteshrajoriya3.atlassian.net/rest/api/3/project/10035","id":10035,"key":"QRE"}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:125 Project Key: QRE
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:126 Project created. Key: QRE

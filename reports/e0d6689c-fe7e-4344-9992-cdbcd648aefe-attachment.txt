@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:43 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:100 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:111 Request sent
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:113 <Response [400]>
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:115 Project Key: None
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:116 Project created. Key: None

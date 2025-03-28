@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:43 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:100 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:111 Request sent
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:113 {"errorMessages":[],"errors":{"projectKey":"Project 'Senegal' uses this project key.","projectLead":"You must specify a valid project lead.","projectName":"A project with that name already exists."}}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:115 Project Key: None
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:116 Project created. Key: None

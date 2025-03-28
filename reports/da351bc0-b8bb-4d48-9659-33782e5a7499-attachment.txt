@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:108 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:121 Request sent: 400
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:123 {"errorMessages":[],"errors":{"projectKey":"Project 'PEDRO' uses this project key."}}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:125 Project Key: None
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:126 Project created. Key: None

@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:43 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:100 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:111 Request sent
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:113 {"self":"https://neeteshrajoriya3.atlassian.net/rest/api/3/project/10030","id":10030,"key":"MBA"}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:115 Project Key: MBA
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:116 Project created. Key: MBA

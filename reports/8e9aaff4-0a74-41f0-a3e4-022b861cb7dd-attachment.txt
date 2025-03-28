@@ -1,0 +1,2 @@
+[32mINFO    [0m JiraProjectAPI:demo2.py:32 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:test_demo3.py:16 Hello World
