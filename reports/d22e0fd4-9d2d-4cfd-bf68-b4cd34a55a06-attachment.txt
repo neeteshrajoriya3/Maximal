@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:194 Initiating archive_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:78 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:85 Project retrieved: 200
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:198 archive_project:Project found. Archiving project: COM

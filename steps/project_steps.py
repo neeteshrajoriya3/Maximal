@@ -93,3 +93,16 @@ def get_projects():
 def show_projects():
     logging.info("Showing recent projects")
 
+@scenario("../features/project.feature", "Archive project with Key")
+
+@given("I have Project Key")
+def search_project(project_key):
+    logging.info(f"Searching Project with Key: {project_key}")
+
+@when("I archive the Project")
+def archive_project(project_key):
+    logging.info(f"Archiving Project: {project_key}")
+
+@then("The Project should get archived")
+def verify_project_archived(project_key):
+    logging.info(f"Project archived: {project_key}")

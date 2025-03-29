@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:192 Initiating archive_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:77 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:84 Project retrieved: 404
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:85 {'errorMessages': ["No project could be found with key 'XML'."], 'errors': {}}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:206 archive_project: Project not found. Stopping execution

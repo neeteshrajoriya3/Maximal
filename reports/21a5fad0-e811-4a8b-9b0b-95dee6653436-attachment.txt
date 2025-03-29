@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:231 Initiating get_statuses_for_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:78 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:85 Project retrieved: 200
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:234 Project is found. Getting all statuses for project:SAS
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:239 {'errorMessages': ["No project could be found with key '{projectIdOrKey}'."], 'errors': {}}

@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:217 Initiating delete_project_asynchronously
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:78 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:85 Project retrieved: 200
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:221 Project found, deleting asynchronously: {key

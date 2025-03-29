@@ -54,6 +54,7 @@ class JiraProjectAPI:
         endpoint = self.config["jira"]["project_api"][endpoint_key]
         if project_key:
             endpoint = endpoint.replace("{projectIdOrKey}", str(project_key))
+            print(f"generated url: {self.jira_url}{endpoint}")
         return f"{self.jira_url}{endpoint}"
 
     def get_all_projects(self):
@@ -81,15 +82,19 @@ class JiraProjectAPI:
             response = requests.get(url, auth=self.auth)
             status_code = response.status_code
             response_data = response.json()
-            self.logger.info(f"Project retrieved: {status_code}")
-            self.logger.info(response.json())
+            if status_code==200:
+                self.logger.info(f"Project retrieved: {status_code}")
+            else:
+                self.logger.info(f"Project could not be retrieved: {status_code}")
+            #self.logger.info(response.json())
             # self.logger.info(f"status_code: {status_code}")
             return response
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Network error: {e}")
+            return None
         except Exception as e:
             self.logger.error(f"Unexpected error in get_project: {e}")
-        return None
+            return None
 
     def delete_project(self, project_key):
         self.logger.info(f"Initiating delete_project: {project_key}")
@@ -188,3 +193,90 @@ class JiraProjectAPI:
         except Exception as e:
             self.logger.info(f"get_projects_paginated: Unable to fetch projects: {e}")
             return None
+    def archive_project(self, key):
+        self.logger.info("Initiating archive_project")
+        response_data=self.get_project(key)
+        print(response_data.status_code)
+        if response_data is None:
+            print(f"None is returned from get project")
+        if response_data.status_code==200:
+            self.logger.info(f"archive_project:Project found. Archiving project: {key}")
+            url = self.get_url("POST_Archive_project")
+            print(url)
+            try:
+                response=requests.post(url, auth=self.auth)
+                print(requests.post(url, auth=self.auth))
+                self.logger.info(f"status code came from response: {response.status_code} ")
+                return response.status_code
+
+            except Exception as e:
+                self.logger.info(f"archive_project: Unable to archive project: {e}")
+                return None
+        else:
+            self.logger.info(f"archive_project: Project not found. Stopping execution")
+        return None
+
+    def delete_project_asynchronously(self,key):
+        self.logger.info("Initiating delete_project_asynchronously")
+        response_data=self.get_project(key)
+        #print(response_data.json())
+        if response_data.status_code==200:
+            self.logger.info(f"Project found, deleting asynchronously: {key}")
+            try:
+                url=self.get_url("POST_Delete_project_asynchronously",key)
+                response=requests.post(url,auth=self.auth)
+                return response.status_code
+            except Exception as e:
+                self.logger.info(f"Could not delete the project: {e}")
+                print(e)
+
+    def get_statuses_for_project(self, key):
+        self.logger.info("Initiating get_statuses_for_project")
+        response_data=self.get_project(key)
+        if response_data:
+            self.logger.info(f"Project is found. Getting all statuses for project:{key}")
+            if response_data.status_code==200:
+                try:
+                    url=self.get_url("GET_Get_all_statuses_for_project",key)
+                    response=requests.get(url,auth=self.auth)
+                    self.logger.info(response.json())
+                    return response
+                except Exception as e:
+                    self.logger.info(f"Project couldn't be found: {e}")
+                    return None
+            else:
+                self.logger.info(f"Project couldn't be found. Status Code:{response_data.status_code}")
+
+    def get_project_issue_type_hierarchy(self, key):
+        self.logger.info("Initiating get_project_issue_type_hierarchy")
+        response_data = self.get_project(key)
+        if response_data:
+            self.logger.info(f"Project is found. Getting issue type hierarchy for project:{key}")
+            if response_data.status_code == 200:
+                try:
+                    url = self.get_url("GET_Get_project_issue_type_hierarchy", key)
+                    response = requests.get(url, auth=self.auth)
+                    self.logger.info(response.json())
+                    return response
+                except Exception as e:
+                    self.logger.info(f"Project couldn't be found: {e}")
+                    return None
+            else:
+                self.logger.info(f"Project couldn't be found. Status Code:{response_data.status_code}")
+
+    def get_project_notification_scheme(self,key):
+        self.logger.info("Initiating get_project_notification_scheme")
+        response_data = self.get_project(key)
+        if response_data:
+            self.logger.info(f"Project is found. Getting notification scheme for project:{key}")
+            if response_data.status_code == 200:
+                try:
+                    url = self.get_url("GET_Get_project_notification_scheme", key)
+                    response = requests.get(url, auth=self.auth)
+                    self.logger.info(response.json())
+                    return response
+                except Exception as e:
+                    self.logger.info(f"Project couldn't be found: {e}")
+                    return None
+            else:
+                self.logger.info(f"Project couldn't be found. Status Code:{response_data.status_code}")

@@ -92,3 +92,30 @@ def test_get_projects_paginated(jira_api):
     response=jira_api.get_projects_paginated(StartAt,maxResults)
     assert response is not None, "test_get_projects_paginated: Unable to fetch projects"
     assert len(response['values']) ==maxResults, "Number of projects are not equal to maxResults"
+
+def test_archive_project(jira_api):
+###This doesn't work as user is not authorized to use feature###
+    key=jira_api.config["jira"]["project"]["key"]
+    print(key)
+    response=jira_api.archive_project(key)
+    assert response==200, "test_archive_project: Unable to archive project"
+
+def test_delete_project_asynchronously(jira_api):
+    key=jira_api.config["jira"]["project"]["key"]
+    response=jira_api.delete_project_asynchronously(key)
+    assert response== 200, f"Project couldn't be deleted: {key}"
+
+def test_get_statuses_for_project(jira_api):
+    key = jira_api.config["jira"]["project"]["key"]
+    response=jira_api.get_statuses_for_project(key)
+    assert response.status_code==200, f"Project statuses couldn't be fetched: {response.status_code}"
+
+def test_get_project_issue_type_hierarchy(jira_api):
+    key=jira_api.config["jira"]["project"]["key"]
+    response=jira_api.get_project_issue_type_hierarchy(key)
+    assert response.status_code == 200, f"issue type hierarchy for project couldn't be fetched: {response.status_code}"
+
+def test_get_project_notification_scheme(jira_api)
+    key = jira_api.config["jira"]["project"]["key"]
+    response = jira_api.get_project_notification_scheme(key)
+    assert response.status_code == 200, f"Notification scheme for project couldn't be fetched: {response.status_code}"

@@ -34,3 +34,8 @@ Feature: Jira Project Management
     Given I have access to Jira project management
     When I search for recent projects
     Then I get a list of recent projects viewed by user
+
+ Scenario: Archive project with Key
+    Given I have Project Key
+    When I archive the Project
+    Then The Project should get archived

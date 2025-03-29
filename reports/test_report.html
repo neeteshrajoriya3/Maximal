@@ -328,7 +328,7 @@ div.media {
   </head>
   <body>
     <h1 id="title">test_report.html</h1>
-    <p>Report generated on 29-Mar-2025 at 14:59:55 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+    <p>Report generated on 29-Mar-2025 at 17:23:17 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
         v4.1.1</p>
     <div id="environment-header">
       <h2>Environment</h2>
@@ -382,7 +382,7 @@ div.media {
         <h2>Summary</h2>
         <div class="additional-summary prefix">
         </div>
-        <p class="run-count">1 test took 593 ms.</p>
+        <p class="run-count">1 test took 505 ms.</p>
         <p class="filter">(Un)check the boxes to filter the results.</p>
         <div class="summary__reload">
           <div class="summary__reload__button hidden" onclick="location.reload()">
@@ -392,10 +392,10 @@ div.media {
         <div class="summary__spacer"></div>
         <div class="controls">
           <div class="filters">
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
-            <span class="failed">0 Failed,</span>
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
-            <span class="passed">1 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">1 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" disabled/>
+            <span class="passed">0 Passed,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
             <span class="skipped">0 Skipped,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
@@ -429,7 +429,7 @@ div.media {
     </table>
   </body>
   <footer>
-    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.0&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.26100-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;7.4.3&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;allure-pytest&#34;: &#34;2.13.5&#34;, &#34;Faker&#34;: &#34;37.0.2&#34;, &#34;bdd&#34;: &#34;7.0.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_project.py::test_get_projects_paginated&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_project.py::test_get_projects_paginated&#34;, &#34;duration&#34;: &#34;593 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_project.py::test_get_projects_paginated&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;593 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.\n\n------------------------------ Captured log call -------------------------------\nINFO     JiraProjectAPI:jira_project_api.py:173 Initiating get_projects_paginated\n\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;test_report.html&#34;}"></div>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.0&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.26100-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;7.4.3&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;allure-pytest&#34;: &#34;2.13.5&#34;, &#34;Faker&#34;: &#34;37.0.2&#34;, &#34;bdd&#34;: &#34;7.0.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_project.py::test_get_statuses_for_project&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_project.py::test_get_statuses_for_project&#34;, &#34;duration&#34;: &#34;505 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_project.py::test_get_statuses_for_project&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;505 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;jira_api = &amp;lt;utils.jira_project_api.JiraProjectAPI object at 0x00000184402C71D0&amp;gt;\n\n    def test_get_statuses_for_project(jira_api):\n        key = jira_api.config[&amp;quot;jira&amp;quot;][&amp;quot;project&amp;quot;][&amp;quot;key&amp;quot;]\n        response=jira_api.get_statuses_for_project(key)\n&amp;gt;       assert response.status_code==200, f&amp;quot;Project statuses couldn&amp;#x27;t be fetched: {response.status_code}&amp;quot;\nE       AttributeError: &amp;#x27;NoneType&amp;#x27; object has no attribute &amp;#x27;status_code&amp;#x27;\n\ntests\\test_project.py:111: AttributeError\n\n------------------------------ Captured log setup ------------------------------\nINFO     JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.\n\n------------------------------ Captured log call -------------------------------\nINFO     JiraProjectAPI:jira_project_api.py:231 Initiating get_statuses_for_project\nINFO     JiraProjectAPI:jira_project_api.py:78 Initiating get_project\nINFO     JiraProjectAPI:jira_project_api.py:85 Project retrieved: 404\n\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;test_report.html&#34;}"></div>
     <script>
       (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')

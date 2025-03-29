@@ -1,13 +1,13 @@
 jira:
   base_url: https://neeteshrajoriya3.atlassian.net
   email: neetesh.rajoriya3@gmail.com
-  api_token: ATATT3xFfGF0t2L3KNnxphW5dbD_AFIn9ggUhGSP3M8EQnM90_4K6nSMweTHvPbGJ1eUwFIByXbAYmw9typ3r5hQjhJoqdSqUV_UdrD2GDhwyd38Ruixq_rhvehDM0eNDZ07Ot-it-jwI1C7WLeh6PohTa5jwr7TkcKTW27z_L7f6DXJZodUuPM=C05CB2DD
+  api_token: ATATT3xFfGF0azlqtiCmL_nC_AQFJExHNQqOadsLZmAzmHPVosJ2QEnRNoa9b8cg3InjfsaCmX7ROR7FZLNRp5JtHRxqa7qBlDJJdfA7cippDFzyfHwk4OooJYbRkKWSYc6Ct_QnwXE-FyehVvoUJdymEugkwHk7h9Mz18FAjZYh6R9QsUH_r2E=BE469D73
   project_key: TEST
   search_jql: ORDER BY created DESC
   test_user_email: neetesh.rajoriya3@gmail.com
   project:
     name: AutomatedProject
-    key: XML
+    key: SAS
     lead_email: neetesh.rajoriya3@gmail.com
     issue:
       summary: Sample Issue
