@@ -65,5 +65,30 @@ def test_get_project(jira_api):
 def test_create_project(jira_api):
     key=jira_api.config["jira"]["new_project"]["key"]
     description=jira_api.config["jira"]["new_project"]["description"]
-    jira_api.create_project(key, description)
-    print("project created")
+    response=jira_api.create_project(key, description)
+    assert response == 200, f"Project not created. Got Error code as {response}"
+
+def test_update_project(jira_api):
+    key=jira_api.config["jira"]["new_project"]["key"]
+    print(key)
+    response=jira_api.update_project(key)
+    print(f"test_update_project: {response}")
+    if response.status_code==200:
+        data=response.json()
+        print(f"test_update_project: This is value of name in response: {data.get("name")}")
+        assert data.get("name")==jira_api.config["jira"]["new_project"]["name"]
+    else:
+        jira_api.logger.info("test_update_project: Project is not updated")
+        assert False, f"Project not updated. Status code received from Response: {response.status_code}"
+
+def test_get_recent_projects(jira_api):
+    response=jira_api.get_recent_projects()
+    assert response is not None, "test_get_recent_projects: Unable to display recent projects"
+    assert len(response.json())<= 20, "More than 20 projects are showing"
+
+def test_get_projects_paginated(jira_api):
+    StartAt=0
+    maxResults=5
+    response=jira_api.get_projects_paginated(StartAt,maxResults)
+    assert response is not None, "test_get_projects_paginated: Unable to fetch projects"
+    assert len(response['values']) ==maxResults, "Number of projects are not equal to maxResults"

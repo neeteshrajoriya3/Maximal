@@ -58,7 +58,7 @@ jira:
     POST_Create_project: /rest/api/3/project
     GET_Get_recent_projects: /rest/api/3/project/recent
     GET_Get_projects_paginated: /rest/api/3/project/search
-    GET_Get_project: /rest/api/3/project/
+    GET_Get_project: /rest/api/3/project/{projectIdOrKey}
     PUT_Update_project: /rest/api/3/project/{projectIdOrKey}
     DEL_Delete_project: /rest/api/3/project/{projectIdOrKey}
     POST_Archive_project: /rest/api/3/project/{projectIdOrKey}/archive
@@ -86,8 +86,8 @@ jira:
     description: Try to calculate the AI application, maybe it will input the primary
       panel!
     key: QQQ
-    name: REMOS
+    name: PNMAC
     lead_AccountId: 712020:ca1ae7f1-3fce-4238-b039-fa6332bcd5d0
     projectTemplateKey: com.pyxis.greenhopper.jira:gh-simplified-agility-scrum
     projectTypeKey: software
-    id: 10036
+    id: null

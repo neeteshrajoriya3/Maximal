@@ -1,0 +1,6 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:108 Initiating project creation
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:124 {"errorMessages":[],"errors":{"projectName":"A project with that name already exists.","projectKey":"Project 'REMOS' uses this project key."}}
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:126 Project Key: None
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:131 Project ID None saved in Config.yaml for further use
+[32mINFO    [0m JiraProjectAPI:test_project.py:72 Project is created

@@ -1,0 +1,4 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:51 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:140 Initiating Update project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:77 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:84 Project retrieved: 200

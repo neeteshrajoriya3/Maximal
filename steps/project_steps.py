@@ -66,3 +66,30 @@ def create_project():
 @then("The project should get created")
 def create_project():
     logging.info("Project got created")
+
+@scenario("../features/project.feature", "Update a Project")
+
+@given("I have access to Jira project management")
+def jira_user_access():
+    logging.info("Accessing JIRA")
+@when("I update a project")
+def update_project():
+    logging.info("Updating project")
+
+@then("The project should get updated")
+def update_project():
+    logging.info("Project updated")
+
+@scenario("../features/project.feature", "Get Recent Project")
+@given("I have access to Jira project management")
+def jira_user_access():
+    logging.info("Accessing JIRA")
+
+@when("I search for recent projects")
+def get_projects():
+    logging.info("Searching recent projects")
+
+@then("I get a list of recent projects viewed by user")
+def show_projects():
+    logging.info("Showing recent projects")
+

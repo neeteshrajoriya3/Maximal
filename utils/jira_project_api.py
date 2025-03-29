@@ -81,9 +81,10 @@ class JiraProjectAPI:
             response = requests.get(url, auth=self.auth)
             status_code = response.status_code
             response_data = response.json()
-            self.logger.info(f"Project retrieved: {response_data}")
-            self.logger.info(f"status_code: {status_code}")
-            return status_code,response_data
+            self.logger.info(f"Project retrieved: {status_code}")
+            self.logger.info(response.json())
+            # self.logger.info(f"status_code: {status_code}")
+            return response
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Network error: {e}")
         except Exception as e:
@@ -116,17 +117,74 @@ class JiraProjectAPI:
             "projectTemplateKey": self.config["jira"]["new_project"]["projectTemplateKey"],
             "projectTypeKey": self.config["jira"]["new_project"]["projectTypeKey"]
         }
+        try:
 
-        response=requests.post(url, auth=self.auth, json= payload)
-        # self.logger.info(f"Request sent: {response.status_code}")
-        data=response.json()
-        self.logger.info(f"{response.text}")
-        project_key=data.get("key")
-        self.logger.info(f"Project Key: {project_key}")
-        self.config["jira"]["new_project"]["id"] = data.get("id")
+            response=requests.post(url, auth=self.auth, json= payload)
+            # self.logger.info(f"Request sent: {response.status_code}")
+            data=response.json()
+            self.logger.info(f"{response.text}")
+            project_key=data.get("key")
+            self.logger.info(f"Project Key: {project_key}")
+            self.config["jira"]["new_project"]["id"] = data.get("id")
 
-        with open("config.yaml","w") as file:
-            yaml.safe_dump(self.config,file,default_flow_style=False,sort_keys=False)
-        self.logger.info(f"Project ID {data.get("id")} saved in Config.yaml for further use")
+            with open("config.yaml","w") as file:
+                yaml.safe_dump(self.config,file,default_flow_style=False,sort_keys=False)
+                self.logger.info(f"Project ID {data.get("id")} saved in Config.yaml for further use")
 
-        return response.json()
+            return response.status_code
+        except requests.exceptions.RequestException as e:
+            self.logger.error(f"Network error: {e}")
+        except Exception as e:
+            self.logger.error(f"Unexpected error in get_project: {e}")
+        return None
+    def update_project(self, key):
+        self.logger.info("Initiating Update project")
+        response = self.get_project(key)
+        print(f"This is response from update_project method: {response}")
+        if response is None:
+            self.logger.error("Failed to retrieve project. Cannot proceed with update.")
+            return response
+        else:
+
+            try:
+                url=self.get_url("PUT_Update_project",key)
+                payload={
+                    "name": self.config["jira"]["new_project"]["name"]
+                }
+                response=requests.put(url, json=payload, auth=self.auth)
+                self.logger.info("utils.update_project: Project updated")
+                return response
+            except Exception as e:
+                self.logger.info(f"util.update_project:Unexpected error has occurred while updating project: {e}")
+                return None
+    def get_recent_projects(self):
+        self.logger.info("Initiating get_recent_projects")
+        try:
+            url=self.get_url("GET_Get_recent_projects")
+            response=requests.get(url, auth=self.auth)
+            self.logger.info("utils.get_recent_projects: List of recent projects:\n")
+            self.logger.info(response.json())
+            return response
+        except Exception as e:
+            self.logger.info(f"util.get_recent_projects: Recent projects are not available: {e}")
+            return None
+
+    def get_projects_paginated(self, startAt, maxResults):
+        self.logger.info("Initiating get_projects_paginated")
+        params= {
+            "startAt": startAt,
+            "maxResults": maxResults
+        }
+        url = self.get_url("GET_Get_projects_paginated")
+
+        try:
+            url=self.get_url("GET_Get_projects_paginated")
+            print(url)
+            response=requests.get(url, params=params,auth=self.auth)
+            json_data=response.json()
+
+           # len(json_data['values']))
+            return response.json()
+        except Exception as e:
+            self.logger.info(f"get_projects_paginated: Unable to fetch projects: {e}")
+            return None

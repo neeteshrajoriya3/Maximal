@@ -24,3 +24,13 @@ Feature: Jira Project Management
     Given I have access to Jira project management
     When I create a project
     Then The project should get created
+
+  Scenario: Update a Project
+    Given I have access to Jira project management
+    When I update a project
+    Then The project should get updated
+
+  Scenario: Get Recent Project
+    Given I have access to Jira project management
+    When I search for recent projects
+    Then I get a list of recent projects viewed by user
