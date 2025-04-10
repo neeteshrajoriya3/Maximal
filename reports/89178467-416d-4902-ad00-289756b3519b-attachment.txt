@@ -1,0 +1,4 @@
+2025-03-31 16:02:24,024 - JiraProjectAPI - INFO - Initiating Update project
+2025-03-31 16:02:24,024 - JiraProjectAPI - INFO - Initiating get_project
+2025-03-31 16:02:24,668 - JiraProjectAPI - INFO - Project retrieved: 200
+2025-03-31 16:02:25,231 - JiraProjectAPI - INFO - utils.update_project: Project updated

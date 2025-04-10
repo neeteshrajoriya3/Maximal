@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:253 Initiating get_project_issue_type_hierarchy
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:80 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:88 Project retrieved: 200
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:256 Project is found. Getting issue type hierarchy for project:SAS
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:264 Project couldn't be found: Expecting value: line 1 column 1 (char 0)

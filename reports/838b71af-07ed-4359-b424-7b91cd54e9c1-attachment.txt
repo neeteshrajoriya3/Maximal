@@ -1,0 +1,4 @@
+2025-03-31 16:02:18,209 - JiraProjectAPI - INFO - Initiating project creation
+2025-03-31 16:02:24,009 - JiraProjectAPI - INFO - {"self":"https://neeteshrajoriya3.atlassian.net/rest/api/3/project/10062","id":10062,"key":"WQW"}
+2025-03-31 16:02:24,009 - JiraProjectAPI - INFO - Project Key: WQW
+2025-03-31 16:02:24,014 - JiraProjectAPI - INFO - Project ID 10062 saved in Config.yaml for further use

@@ -1,0 +1,3 @@
+[32mINFO    [0m JiraProjectAPI:test_project.py:60 Executing get project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:80 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:90 Project could not be retrieved: 404

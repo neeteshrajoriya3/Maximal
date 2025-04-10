@@ -1,33 +1,37 @@
-# import pytest
-# import yaml
-# from utils.jira_user_api import get_all_users, search_user
-#
-# # ✅ Load configuration from config.yaml
-# with open("config.yaml", "r") as file:
-#     config = yaml.safe_load(file)
-#
-#
-# @pytest.mark.api  # ✅ API-related test
-# @pytest.mark.user  # ✅ User-related test
-# def test_get_all_users():
-#     """Test to fetch all users from Jira."""
-#     users = get_all_users()
-#
-#     assert isinstance(users, list)  # ✅ Ensure the result is a list
-#     assert len(users) > 0  # ✅ Ensure there is at least one user
-#
-#
-# @pytest.mark.api  # ✅ API-related test
-# @pytest.mark.user  # ✅ User-related test
-# def test_search_user():
-#     """Test to search for a user using email from config.yaml."""
-#     user_email = config["jira"]["test_user_email"]  # ✅ Fetch dynamically
-#     user_results = search_user(user_email)
-#
-#     assert isinstance(user_results, list)  # ✅ Ensure the response is a list
-#     assert len(user_results) > 0  # ✅ Ensure at least one result is found
-#     assert user_results[0]["emailAddress"] == user_email  # ✅ Verify correct user
-#
-# def delete_project():
-#     #delete a project by key if it is present
-#
+import requests
+import yaml
+import pytest
+from pytest_bdd import scenario, given,when,then, parsers
+import logging
+from utils.customlogger import LogGen
+from utils.data_configuration import configuration
+from utils.jira_user_api import JiraUserAPI
+
+# logger=LogGen.loggen()
+@pytest.fixture(scope="session")
+def jira_api():
+    return JiraUserAPI()
+
+# def test_create_user(jira_api):
+#     jira_api.logger.info("Starting execution of test_create_user")
+#     user_email=jira_api.config["jira"]["user_api"]["user_email_for_creation"] #when step
+#     response=jira_api.create_user(user_email) #when step
+#     if response is not None: #then
+#         jira_api.logger.info(response.json())#then
+#     assert response.status_code is 201,"Test Failed"#then
+
+##Defining scenario for create user feature:
+
+@scenario(".\\features\\user.feature", "Create a user")
+@pytest.fixture()
+def context():
+    return()
+
+##Step definition begins here
+# @given("I have access to Jira project management")
+@given(parsers.parse("I have access to Jira project management"))
+def access_to_jira():
+    jira_api().logger.info("Given: I have access to Jira project management")
+
+@when("I have a user for user creation"):
+def create_jira_user(jira_api):

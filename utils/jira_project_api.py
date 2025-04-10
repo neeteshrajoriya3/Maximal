@@ -1,40 +1,18 @@
 import json
 import logging
+import pytest
 import requests
 import yaml
 import os
+from utils.customlogger import LogGen
 from requests.auth import HTTPBasicAuth
 from utils.status_messages import STATUS_MESSAGES
 
 class JiraProjectAPI:
     def __init__(self, config_path="config.yaml"):
-        # ✅ Set up logging
-        self.logger = logging.getLogger(self.__class__.__name__)
-        self.logger.setLevel(logging.DEBUG)  # Set logging level
 
-        # ✅ Ensure the logs directory exists
-        log_dir = os.path.join(os.path.dirname(__file__), "../logs")
-        log_file = os.path.join(log_dir, "test_log.log")
-        if not os.path.exists(log_dir):
-            os.makedirs(log_dir)
+        self.logger=LogGen.loggen()
 
-        # ✅ Create a file handler
-        file_handler = logging.FileHandler(log_file)
-        file_handler.setLevel(logging.DEBUG)  # Capture all logs in the file
-
-        # ✅ Create a console handler
-        console_handler = logging.StreamHandler()
-        console_handler.setLevel(logging.INFO)  # Show only INFO+ in terminal
-
-        # ✅ Set formatter
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(formatter)
-        console_handler.setFormatter(formatter)
-
-        # ✅ Avoid duplicate handlers
-        if not self.logger.handlers:
-            self.logger.addHandler(file_handler)
-            self.logger.addHandler(console_handler)
         # ✅ Load configuration from config.yaml
 
         def load_config():
@@ -59,19 +37,31 @@ class JiraProjectAPI:
 
     def get_all_projects(self):
         self.logger.info("Initiating get_all_projects")
+
         url = self.get_url("GET_Get_all_projects")
 
         try:
             response = requests.get(url, auth=self.auth)
             self.logger.info(f"Response from fetching projects: {response.status_code} - {response.text}")
             status_code = response.status_code
-            success, message = STATUS_MESSAGES.get(status_code, (False, f"Unexpected error: {status_code}: {response.text}"))
-            self.logger.info(message) if success else self.logger.warning(message)
-            return response.json() if success else None
+            print(f"\nStatus code from utils {status_code}")
+
+            if response is not None:
+                try:
+                    data = response  # Parse the JSON
+                    self.logger.info(f"Response JSON: {data}")  # Log the parsed JSON
+                    return data  # Return the parsed JSON data
+                except ValueError as e:
+                    self.logger.error(f"Error parsing JSON: {e}")
+                    return None
+            else:
+                self.logger.warning(message)
+                return None
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Network error: {e}")
         except Exception as e:
             self.logger.error(f"Unexpected error in get_project: {e}")
+
         return None
 
     def get_project(self, project_key):
@@ -280,3 +270,6 @@ class JiraProjectAPI:
                     return None
             else:
                 self.logger.info(f"Project couldn't be found. Status Code:{response_data.status_code}")
+    def print_hello(self):
+        h="Hello World"
+        return h

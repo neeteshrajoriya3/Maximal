@@ -1,0 +1,4 @@
+2025-03-31 16:02:26,586 - JiraProjectAPI - INFO - Initiating delete_project_asynchronously
+2025-03-31 16:02:26,586 - JiraProjectAPI - INFO - Initiating get_project
+2025-03-31 16:02:27,198 - JiraProjectAPI - INFO - Project retrieved: 200
+2025-03-31 16:02:27,198 - JiraProjectAPI - INFO - Project found, deleting asynchronously: SAS

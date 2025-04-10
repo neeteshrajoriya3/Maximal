@@ -1,0 +1,4 @@
+2025-03-31 16:02:16,387 - JiraProjectAPI - INFO - Initiating get_project
+2025-03-31 16:02:17,061 - JiraProjectAPI - INFO - Project retrieved: 200
+2025-03-31 16:02:17,062 - JiraProjectAPI - INFO - Value of project_status_code: <Response [200]>
+2025-03-31 16:02:17,062 - JiraProjectAPI - INFO - Project is not found for deletion. Stopping execution for deletion

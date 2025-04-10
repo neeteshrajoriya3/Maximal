@@ -1,0 +1,5 @@
+2025-03-31 16:02:30,106 - JiraProjectAPI - INFO - Initiating get_project_notification_scheme
+2025-03-31 16:02:30,106 - JiraProjectAPI - INFO - Initiating get_project
+2025-03-31 16:02:30,805 - JiraProjectAPI - INFO - Project retrieved: 200
+2025-03-31 16:02:30,805 - JiraProjectAPI - INFO - Project is found. Getting notification scheme for project:SAS
+2025-03-31 16:02:31,397 - JiraProjectAPI - INFO - {'errorMessages': ['Selected project does not exist.'], 'errors': {}}

@@ -1,0 +1,4 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:222 Initiating delete_project_asynchronously
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:80 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:88 Project retrieved: 200
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:226 Project found, deleting asynchronously: SAS

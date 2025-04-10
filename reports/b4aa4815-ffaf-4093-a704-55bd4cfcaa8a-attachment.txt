@@ -1,0 +1,4 @@
+[32mINFO    [0m root:jira_project_api.py:29 JiraProjectAPI initialized successfully.
+[32mINFO    [0m root:test_project.py:66 Executing get project
+[32mINFO    [0m root:jira_project_api.py:68 Initiating get_project
+[32mINFO    [0m root:jira_project_api.py:78 Project could not be retrieved: 404

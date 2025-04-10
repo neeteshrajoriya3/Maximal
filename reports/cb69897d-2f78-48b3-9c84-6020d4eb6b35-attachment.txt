@@ -1,0 +1,4 @@
+2025-03-31 16:02:17,191 - JiraProjectAPI - INFO - Starting project restore: SAS
+2025-03-31 16:02:17,191 - JiraProjectAPI - INFO - Initiating restore_project: SAS
+2025-03-31 16:02:17,532 - JiraProjectAPI - INFO - Project restored: SAS, Status Code: 400
+2025-03-31 16:02:17,533 - JiraProjectAPI - INFO - Issue occurred in restoring project: SAS

@@ -1,0 +1,1 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:180 Initiating get_projects_paginated

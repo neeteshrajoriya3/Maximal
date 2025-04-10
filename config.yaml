@@ -81,13 +81,42 @@ jira:
     GET_Get_user_groups: /rest/api/3/user/groups
     GET_Get_all_users_default: /rest/api/3/users
     GET_Get_all_users: /rest/api/3/users/search
+    user_email_for_creation: neet1221@yopmail.com
+
+  issue_api:
+    POST_Bulk_fetch_changelogs: /rest/api/3/changelog/bulkfetch
+    GET_Get_events: /rest/api/3/events
+    POST_Create_issue: /rest/api/3/issue
+    PUT_Archive_issue(s)_by_issue_ID/key: /rest/api/3/issue/archive
+    POST_Archive_issue(s)_by_JQL: /rest/api/3/issue/archive
+    POST_Bulk_create_issue: /rest/api/3/issue/bulk
+    POST_Bulk_fetch_issues: /rest/api/3/issue/bulkfetch
+    GET_Get_create_issue_metadata: /rest/api/3/issue/createmeta
+    GET_Get_create_metadata_issue_types_for_a_project: /rest/api/3/issue/createmeta/{projectIdOrKey}/issuetypes
+    GET_Get_create_field_metadata_for_a_project_and_issue_type_id: /rest/api/3/issue/createmeta/{projectIdOrKey}/issuetypes/{issueTypeId}
+    GET_Get_issue_limit_report: /rest/api/3/issue/limit/report
+    PUT_Unarchive_issue(s)_by_issue_keys/ID: /rest/api/3/issue/unarchive
+    GET_Get_issue: /rest/api/3/issue/{issueIdOrKey}
+    PUT_Edit_issue: /rest/api/3/issue/{issueIdOrKey}
+    DEL_Delete_issue: /rest/api/3/issue/{issueIdOrKey}
+    PUT_Assign_issue: /rest/api/3/issue/{issueIdOrKey}/assignee
+    GET_Get_changelogs: /rest/api/3/issue/{issueIdOrKey}/changelog
+    POST_Get_changelogs_by_IDs: /rest/api/3/issue/{issueIdOrKey}/changelog/list
+    GET_Get_edit_issue_metadata: /rest/api/3/issue/{issueIdOrKey}/editmeta
+    POST_Send_notification_for_issue: /rest/api/3/issue/{issueIdOrKey}/notify
+    GET_Get_transitions: /rest/api/3/issue/{issueIdOrKey}/transitions
+    POST_Transition_issue: /rest/api/3/issue/{issueIdOrKey}/transitions
+    PUT_Export_archived_issue(s): /rest/api/3/issues/archive/export
+
   new_project:
     assigneeType: PROJECT_LEAD
     description: Try to calculate the AI application, maybe it will input the primary
       panel!
-    key: QQQ
-    name: PNMAC
+    key: WQW
+    name: WQER
     lead_AccountId: 712020:ca1ae7f1-3fce-4238-b039-fa6332bcd5d0
     projectTemplateKey: com.pyxis.greenhopper.jira:gh-simplified-agility-scrum
     projectTypeKey: software
-    id: null
+    id: 10062
+
+

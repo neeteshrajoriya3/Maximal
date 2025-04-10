@@ -1,0 +1,6 @@
+[32mINFO    [0m root:jira_user_api.py:15 JiraUserAPI initialized successfully.
+[32mINFO    [0m root:test_user.py:22 Starting execution of test_create_user
+[32mINFO    [0m root:jira_user_api.py:44 Initiating create_user from utils
+[32mINFO    [0m root:jira_user_api.py:51 
+[32mINFO    [0m root:jira_user_api.py:52 Status code for response: 400
+[32mINFO    [0m root:jira_user_api.py:53

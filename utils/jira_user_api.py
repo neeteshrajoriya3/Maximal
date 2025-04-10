@@ -1,45 +1,98 @@
-# from urllib.parse import quote
-# import requests
-# import yaml
-# import logging
-# from requests.auth import HTTPBasicAuth
-#
-# #load JIRA configuration
-# with open("config.yaml","r") as file:
-#     config=yaml.safe_load(file)
-# JIRA_URL=config["jira"]["base_url"]
-# AUTH=HTTPBasicAuth(config["jira"]["email"],config["jira"]["api_token"])
-# GET_ALL_USER=config["jira"]["user_api"]["GET_Get_all_users"]
-#
-# #Configure Logging
-# ##This will put all the log info in test_log.log
-# logging.basicConfig(filename="logs/test_log.log",level=logging.INFO)
-#
-#
-# def get_all_users():  # ✅ Default query parameter
-#     """Fetches a list of all users in Jira with a default query."""
-#     """url1 = f"{JIRA_URL}/rest/api/3/user/search?query={query}"  # ✅ Pass query param"""
-#     url = f"{JIRA_URL}{GET_ALL_USER}"  # ✅ Pass query param
-#     response = requests.get(url, auth=AUTH)
-#
-#     logging.info(f"Fetched users for function get_all_user: {response.status_code} - {response.text}")
-#
-#     return response.json()
-#
-# def search_user(query):
-#     """Searches for a user by name or email."""
-#     encoded_query=quote(query)
-#     url=f"{JIRA_URL}/rest/api/3/user/search?query={encoded_query}"
-#
-#     response=requests.get(url,auth=AUTH)
-#     logging.info(f"User search response: {response.status_code} - {response.text}")
-#     return response.json()
-#
-# def get_lead_account_id(user_email):
-#     """Gets the Lead Account ID of a specific user (needed for project creation)."""
-#     users = search_user(user_email)
-#     if users:
-#         lead_account_id=users[0]["accountId"]
-#         logging.info(f"Lead Account ID for {user_email}: {lead_account_id}")
-#         return lead_account_id
-#     return None
+import pytest
+import logging
+from utils.customlogger import LogGen
+import requests
+import yaml
+from requests.auth import HTTPBasicAuth
+from utils.data_configuration import configuration
+
+class JiraUserAPI:
+    def __init__(self, config_path="config.yaml"):
+        self.logger=LogGen.loggen()
+        self.config=configuration.load_config_read()
+        self.jira_url=self.config["jira"]["base_url"]
+        self.auth = HTTPBasicAuth(self.config["jira"]["email"], self.config["jira"]["api_token"])
+        self.logger.info("JiraUserAPI initialized successfully.")
+
+    def get_url(self,endpoint_key):
+        endpoint=self.config["jira"]["user_api"][endpoint_key]
+        return f"{self.jira_url}{endpoint}"
+    def get_user(self,accountid):
+        self.logger.info("Initiating JIRAUserAPI::get_user")
+        url=self.get_url("GET_Get_user")
+        payload={
+            "accountId" : accountid
+        }
+        try:
+            response=requests.get(url, auth=self.auth, json=payload)
+            self.logger.info(f"Response from request: {response.status_code}, {response.text}")
+            if response is not None:
+                try:
+                    return response
+                except Exception as e:
+                    return e
+            else:
+                return None
+        except requests.exceptions.RequestException as e:
+            return e
+
+
+
+
+
+    def create_user(self, email):
+        self.logger.info("Initiating create_user from utils")
+        url=self.get_url("POST_Create_user")
+        print(url)
+        url="https://neeteshrajoriya3.atlassian.net/rest/api/3/user"
+        payload={
+            "emailAddress":"pa@yopmail.com",
+            "products": []
+        }
+        headers = {
+            "Content-Type": "application/json"
+        }
+        try:
+            response=requests.post(url, auth=self.auth, json=payload, headers=headers)
+            self.logger.info(f"Status code for response: {response.status_code}")
+            self.logger.info(response.json())
+            return response
+        except requests.exceptions.RequestException as e:
+            return e
+        except Exception as e:
+            return e
+
+
+    #
+    # def delete_user(self):
+    #     pass
+    #
+    # def get_bulk_users(self):
+    #     pass
+    #
+    # def get_account_ids_for_users(self):
+    #     pass
+    #
+    # def get_user_details_columns(self):
+    #     pass
+    #
+    # def set_user_details_columns(self):
+    #     pass
+    #
+    # def reset_user_details_coulmn():
+    #     pass
+    #
+    # def get_user_email():
+    #     pass
+    #
+    # def get_user_email_bulk():
+    #     pass
+    #
+    # def get_user_groups():
+    #     pass
+    #
+    # def get_all_users_default():
+    #     pass
+    #
+    # def get_all_users():
+    #     pass

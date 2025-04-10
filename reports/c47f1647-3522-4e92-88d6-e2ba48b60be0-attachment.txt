@@ -1,0 +1,6 @@
+WQW
+generated url: https://neeteshrajoriya3.atlassian.net/rest/api/3/project/WQW
+This is response from update_project method: <Response [200]>
+generated url: https://neeteshrajoriya3.atlassian.net/rest/api/3/project/WQW
+test_update_project: <Response [200]>
+test_update_project: This is value of name in response: WQER

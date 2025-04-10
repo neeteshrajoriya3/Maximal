@@ -1,0 +1,3 @@
+[32mINFO    [0m root:jira_user_api.py:15 JiraUserAPI initialized successfully.
+[32mINFO    [0m root:test_user.py:14 Starting execution of test_get_user
+[32mINFO    [0m root:jira_user_api.py:21 Initiating JIRAUserAPI::get_user

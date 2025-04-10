@@ -1,0 +1,5 @@
+2025-03-31 16:02:29,178 - JiraProjectAPI - INFO - Initiating get_project_issue_type_hierarchy
+2025-03-31 16:02:29,178 - JiraProjectAPI - INFO - Initiating get_project
+2025-03-31 16:02:29,768 - JiraProjectAPI - INFO - Project retrieved: 200
+2025-03-31 16:02:29,768 - JiraProjectAPI - INFO - Project is found. Getting issue type hierarchy for project:SAS
+2025-03-31 16:02:30,089 - JiraProjectAPI - INFO - Project couldn't be found: Expecting value: line 1 column 1 (char 0)

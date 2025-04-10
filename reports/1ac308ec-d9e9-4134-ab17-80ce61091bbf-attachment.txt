@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:270 Initiating get_project_notification_scheme
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:80 Initiating get_project
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:88 Project retrieved: 200
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:273 Project is found. Getting notification scheme for project:SAS
+[32mINFO    [0m JiraProjectAPI:jira_project_api.py:278 {'errorMessages': ['Selected project does not exist.'], 'errors': {}}
