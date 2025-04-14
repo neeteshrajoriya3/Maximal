@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:106 Initiating project creation
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:122 {"self":"https://neeteshrajoriya3.atlassian.net/rest/api/3/project/10095","id":10095,"key":"DNDF"}
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:124 Project Key: DNDF
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:129 Project ID 10095 saved in Config.yaml for further use

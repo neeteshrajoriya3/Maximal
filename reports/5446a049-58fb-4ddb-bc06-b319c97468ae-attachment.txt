@@ -1,0 +1,3 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:70 Initiating get_project
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:78 Project retrieved: 200

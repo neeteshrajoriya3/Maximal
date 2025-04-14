@@ -1,0 +1,6 @@
+[Given] Stored in context 
+Hello
+[WHEN] Context message is: 
+Hello
+[THEN] Final message: 
+Hello again

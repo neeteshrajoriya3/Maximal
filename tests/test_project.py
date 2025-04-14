@@ -28,8 +28,9 @@ def test_get_all_projects(jira_api):
 @pytest.mark.project
 def test_delete_project_by_key(jira_api):
     key = config["jira"]["project"]["key"]
-    project_status_code = jira_api.get_project(key)
-    jira_api.logger.info(f"Value of project_status_code: {project_status_code}")
+    project = jira_api.get_project(key)
+    project_status_code=project.status_code
+    jira_api.logger.info(f"utils.test_delete_project_by_key: Value of project_status_code: {project_status_code}")
     deletion_result=None
     if project_status_code== 200:
         jira_api.logger.info(f"Project key/ID is available for deletion: {key}. Starting deletion of Project")

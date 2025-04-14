@@ -1,0 +1,3 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:92 utils.delete_project: Initiating delete_project: TCP
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:95 utils.delete_project: Project deleted: TCP, Status Code: 404

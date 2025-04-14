@@ -14,7 +14,7 @@ class JiraUserAPI:
         self.auth = HTTPBasicAuth(self.config["jira"]["email"], self.config["jira"]["api_token"])
         self.logger.info("JiraUserAPI initialized successfully.")
 
-    def get_url(self,endpoint_key):
+    def get_url(self,endpoint_key=None):
         endpoint=self.config["jira"]["user_api"][endpoint_key]
         return f"{self.jira_url}{endpoint}"
     def get_user(self,accountid):

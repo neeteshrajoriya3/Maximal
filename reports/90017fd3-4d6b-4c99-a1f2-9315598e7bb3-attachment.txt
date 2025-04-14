@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:106 Initiating project creation
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:122 {"errorMessages":[],"errors":{"projectKey":"Project keys must start with an uppercase letter, followed by one or more uppercase alphanumeric characters."}}
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:124 Project Key: None
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:129 Project ID None saved in Config.yaml for further use

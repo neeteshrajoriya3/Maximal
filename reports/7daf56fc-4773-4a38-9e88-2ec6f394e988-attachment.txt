@@ -1,0 +1,5 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:70 Initiating get_project
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:78 Project retrieved: 200
+[32mINFO    [0m JiraTestLogger:test_project.py:32 Value of project_status_code: <Response [200]>
+[32mINFO    [0m JiraTestLogger:test_project.py:39 Project is not found for deletion. Stopping execution for deletion

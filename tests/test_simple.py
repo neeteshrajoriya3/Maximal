@@ -17,7 +17,7 @@ def jira_api():
 def number_given(jira_api):
     # Example usage of jira_api instance
     print(f"Using Jira API instance: {JiraProjectAPI.print_hello()}")
-
+    print()
 @when("add number with 2")
 def add_number(jira_api):
     a=JiraProjectAPI.get_all_projects()

@@ -17,9 +17,11 @@ class JiraProjectAPI:
 
         def load_config():
             """Force reload the latest config.yaml every time it's called."""
-            with open("config.yaml", "r") as f:
-                return yaml.safe_load(f)
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            config_path = os.path.join(base_dir, "config.yaml")
 
+            with open(config_path, "r") as f:
+                return yaml.safe_load(f)
         # Call load_config() each time you need the config
         self.config = load_config()
 
@@ -48,14 +50,14 @@ class JiraProjectAPI:
 
             if response is not None:
                 try:
-                    data = response  # Parse the JSON
+                    data = response.json()  # Parse the JSON
                     self.logger.info(f"Response JSON: {data}")  # Log the parsed JSON
                     return data  # Return the parsed JSON data
                 except ValueError as e:
                     self.logger.error(f"Error parsing JSON: {e}")
                     return None
             else:
-                self.logger.warning(message)
+                self.logger.warning("Nothing to return")
                 return None
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Network error: {e}")
@@ -87,10 +89,10 @@ class JiraProjectAPI:
             return None
 
     def delete_project(self, project_key):
-        self.logger.info(f"Initiating delete_project: {project_key}")
+        self.logger.info(f"utils.delete_project: Initiating delete_project: {project_key}")
         url = self.get_url("DEL_Delete_project", project_key)
         response = requests.delete(url, auth=self.auth)
-        self.logger.info(f"Project deleted: {project_key}, Status Code: {response.status_code}")
+        self.logger.info(f"utils.delete_project: Project deleted: {project_key}, Status Code: {response.status_code}")
         return response.status_code
 
     def restore_project(self, project_key):
@@ -179,7 +181,7 @@ class JiraProjectAPI:
             json_data=response.json()
 
            # len(json_data['values']))
-            return response.json()
+            return response
         except Exception as e:
             self.logger.info(f"get_projects_paginated: Unable to fetch projects: {e}")
             return None
