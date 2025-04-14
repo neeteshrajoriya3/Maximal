@@ -11,7 +11,7 @@ def jira_api() -> JiraProjectAPI:
     return JiraProjectAPI()
 
 @pytest.fixture
-def jira_project_types() -> JIRAProjectTypeAPI:
+def jiraAPI_ProjectType() -> JIRAProjectTypeAPI:
     return JIRAProjectTypeAPI()
 @pytest.fixture
 def context() -> SimpleNamespace:

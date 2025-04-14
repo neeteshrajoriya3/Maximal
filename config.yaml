@@ -122,3 +122,5 @@ jira:
     GET_Get_project_type_by_key: /rest/api/3/project/type/{projectTypeKey}
     GET_Get_accessible_project_type_by_key: /rest/api/3/project/type/{projectTypeKey}/accessible
     Project_type_key: business
+
+
