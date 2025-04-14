@@ -1,0 +1,4 @@
+[32mINFO    [0m JiraTestLogger:jira_project_types_api.py:23 JIRAProjectTypeAPI intiated successfully
+[32mINFO    [0m JiraTestLogger:test_project_type.py:48 Inside test_get_project_type_by_key/when
+[32mINFO    [0m JiraTestLogger:jira_project_types_api.py:69 Inside get_accessible_project_type_by_key
+[32mINFO    [0m JiraTestLogger:test_project_type.py:54 Inside test_get_project_type_by_key/then

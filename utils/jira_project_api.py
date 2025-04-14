@@ -37,7 +37,7 @@ class JiraProjectAPI:
             endpoint=endpoint.replace("{projectId}",str(project_key))
             endpoint=endpoint.replace("{projectKeyOrId}", str(project_key))
             print(f"generated url: {self.jira_url}{endpoint}")
-        return f"{self.jira_url}{endpoint}"
+            return f"{self.jira_url}{endpoint}"
 
     def get_all_projects(self):
         self.logger.info("Initiating get_all_projects")
