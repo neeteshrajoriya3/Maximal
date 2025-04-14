@@ -108,9 +108,8 @@ jira:
     PUT_Export_archived_issue(s): /rest/api/3/issues/archive/export
   new_project:
     assigneeType: PROJECT_LEAD
-    description: Try to calculate the AI application, maybe it will input the primary
-      panel!
-    key: POPY
+    description: Try to calculate the AI application, maybe it will input the primary panel!
+    key: TCP
     name: Disco_Deewane
     lead_AccountId: 712020:ca1ae7f1-3fce-4238-b039-fa6332bcd5d0
     projectTemplateKey: com.pyxis.greenhopper.jira:gh-simplified-agility-scrum

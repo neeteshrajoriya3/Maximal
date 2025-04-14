@@ -29,3 +29,38 @@ Feature: Jira Project Management
     Given i have access to JIRA
     When user search for projects
     Then a paginated list of projects is displayed
+
+  Scenario: Update Project
+    Given i have access to JIRA
+    When I update a project
+    Then project should get updated
+
+  Scenario: Archive Project
+    Given i have access to JIRA
+    When I archive a project
+    Then project should get archived
+
+  Scenario: Delete Project asynchronously
+    Given i have access to JIRA
+    When I delete project synchronously
+    Then project gets deleted synchronously
+
+  Scenario: Restore Project
+    Given i have access to JIRA
+    When I restore the project
+    Then project should get restored
+
+  Scenario: Get Statuses of Project
+    Given i have access to JIRA
+    When I search for statuses of project
+    Then I get a list of all project statuses
+
+  Scenario: Get project issue type
+    Given i have access to JIRA
+    When I search for issue types for project
+    Then I get a list of all issue types
+
+  Scenario: Get project notification scheme
+    Given i have access to JIRA
+    When I search for notification scheme for project
+    Then I get a list of all notification scheme

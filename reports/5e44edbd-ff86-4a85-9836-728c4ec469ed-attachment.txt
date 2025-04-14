@@ -1,0 +1,8 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:test_jira_project.py:206 Inside test_issue_type_of_project/when
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:245 Initiating get_project_issue_type_hierarchy
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:71 Initiating get_project
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:79 Project retrieved: 200
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:248 Project is found. Getting issue type hierarchy for project:10096
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:253 {'projectId': 10096, 'projectEntityId': '5c9d56ee-2c63-4781-9280-72d34940b860', 'versionToken': {'id': '00000000-0000-0000-0000-000000000000', 'versionNumber': 0}, 'hierarchy': [{'level': 0, 'name': 'Base', 'issueTypes': [{'id': 10174, 'entityId': '5b6cda18-d20c-4655-bd1f-0a55679e2740', 'name': 'Bug', 'avatarId': 10303}, {'id': 10175, 'entityId': '2e2cf1c8-9692-49a1-86b1-3e152190c015', 'name': 'Story', 'avatarId': 10315}, {'id': 10173, 'entityId': 'd3d83b19-02b0-4efa-99ee-02ef9b3f6642', 'name': 'Task', 'avatarId': 10318}]}, {'level': 1, 'name': 'Epic', 'issueTypes': [{'id': 10176, 'entityId': 'd9d85d2a-5d75-4488-ae37-3a5b1bee62d2', 'name': 'Epic', 'avatarId': 10307}]}, {'level': -1, 'name': 'Subtask', 'issueTypes': [{'id': 10177, 'entityId': '3985d54d-d5b1-4911-9f05-6edbb2611caf', 'name': 'Subtask', 'avatarId': 10316}]}]}
+[32mINFO    [0m JiraTestLogger:test_jira_project.py:212 Inside of test_issue_type_of_project/then

@@ -21,5 +21,8 @@ def generate_fake_text(type="sentence"):
         return fake.sentence()
     elif type == "paragraph":
         return fake.paragraph()
+    elif type == "name":
+        return fake.name()
+
     else:
         return "Invalid type"

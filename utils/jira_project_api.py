@@ -34,6 +34,8 @@ class JiraProjectAPI:
         endpoint = self.config["jira"]["project_api"][endpoint_key]
         if project_key:
             endpoint = endpoint.replace("{projectIdOrKey}", str(project_key))
+            endpoint=endpoint.replace("{projectId}",str(project_key))
+            endpoint=endpoint.replace("{projectKeyOrId}", str(project_key))
             print(f"generated url: {self.jira_url}{endpoint}")
         return f"{self.jira_url}{endpoint}"
 
@@ -100,7 +102,7 @@ class JiraProjectAPI:
         url = self.get_url("POST_Restore_deleted_or_archived_project", project_key)
         response = requests.post(url, auth=self.auth)
         self.logger.info(f"Project restored: {project_key}, Status Code: {response.status_code}")
-        return response.status_code
+        return response
 
     def create_project(self, key, description):
         self.logger.info("Initiating project creation")
@@ -145,8 +147,9 @@ class JiraProjectAPI:
 
             try:
                 url=self.get_url("PUT_Update_project",key)
+                from conftest import generate_fake_text
                 payload={
-                    "name": self.config["jira"]["new_project"]["name"]
+                    "name": generate_fake_text("name")
                 }
                 response=requests.put(url, json=payload, auth=self.auth)
                 self.logger.info("utils.update_project: Project updated")
@@ -199,7 +202,7 @@ class JiraProjectAPI:
                 response=requests.post(url, auth=self.auth)
                 print(requests.post(url, auth=self.auth))
                 self.logger.info(f"status code came from response: {response.status_code} ")
-                return response.status_code
+                return response
 
             except Exception as e:
                 self.logger.info(f"archive_project: Unable to archive project: {e}")
@@ -217,7 +220,7 @@ class JiraProjectAPI:
             try:
                 url=self.get_url("POST_Delete_project_asynchronously",key)
                 response=requests.post(url,auth=self.auth)
-                return response.status_code
+                return response
             except Exception as e:
                 self.logger.info(f"Could not delete the project: {e}")
                 print(e)

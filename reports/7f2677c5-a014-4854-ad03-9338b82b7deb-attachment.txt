@@ -1,0 +1,8 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:test_jira_project.py:141 Inside test_archive_project/when
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:190 Initiating archive_project
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:70 Initiating get_project
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:78 Project retrieved: 200
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:196 archive_project:Project found. Archiving project: XML
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:202 status code came from response: 403 
+[32mINFO    [0m JiraTestLogger:test_jira_project.py:147 Inside verify_archive_project/then

@@ -1,0 +1,8 @@
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:31 JiraProjectAPI initialized successfully.
+[32mINFO    [0m JiraTestLogger:test_jira_project.py:222 Inside of test_get_notification_scheme_for_project/when
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:263 Initiating get_project_notification_scheme
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:72 Initiating get_project
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:80 Project retrieved: 200
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:266 Project is found. Getting notification scheme for project:TCP
+[32mINFO    [0m JiraTestLogger:jira_project_api.py:271 {'expand': 'notificationSchemeEvents,user,group,projectRole,field,all', 'id': 10015, 'self': 'https://neeteshrajoriya3.atlassian.net/rest/api/3/notificationscheme/10015', 'name': 'TCP: Simplified Notification Scheme', 'scope': {'type': 'PROJECT', 'project': {'id': '10024'}}}
+[32mINFO    [0m JiraTestLogger:test_jira_project.py:228 Inside of test_get_notification_scheme_for_project/then
